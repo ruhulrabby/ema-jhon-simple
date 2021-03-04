@@ -1,9 +1,19 @@
 import React from 'react';
 
-const ReviewAllItem = () => {
+const ReviewAllItem = (props) => {
+    const {name, quantity} = props.product;
+    const reviewItemStyle = {
+        borderBottom: '1px solid lightgray',
+        marginBottom: '5px',
+        paddingBottom: '5px',
+        marginLeft: '200px'
+    }
     return (
-        <div>
-            <h2>this is to reivew</h2>
+        <div style= {reviewItemStyle} className="review-item">
+            <h4 className="product-name">{name}</h4>
+            <p>Qantity: {quantity} </p>
+            <br/>
+            <button className="main-button">Remove</button>
         </div>
     );
 };

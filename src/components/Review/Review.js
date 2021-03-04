@@ -22,7 +22,7 @@ const Review = () => {
         <div>
             <h2>Cart Items: {cart.length}</h2>
             {
-                cart.map(pd => <ReviewAllItem product= {pd} ></ReviewAllItem>)
+                cart.map(pd => <ReviewAllItem key= {pd.key} product= {pd} ></ReviewAllItem>)
             }
             
             
@@ -32,5 +32,3 @@ const Review = () => {
 };
 
 export default Review;
-
-// 04.28 to start again
